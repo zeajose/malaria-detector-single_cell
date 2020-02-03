@@ -1,0 +1,64 @@
+.<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='../static/style.css'>
+    <link rel='stylesheet' href='../static/dependencies/bulma.min.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <script src='../static/client.js'></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <div class="menu">
+      <div class="label navbar-avatar"><img src="https://kitt.lewagon.com/placeholder/users/ssaunier" /></div>
+      <div class="spacer"></div>
+      <div class="item"><a href="https://www.dropbox.com/sh/ch16wls5un798qx/AAD7t4iPImhi76Q8giYSYBhLa?dl=1" class="nav-link">Malaria sample</a></div>
+      <div class="item"><a href="https://www.dropbox.com/sh/x3z1r006g0npio2/AABVqcZHUeDTS02UwMiwa2cVa?dl=1" class="nav-link">Healthy sample</a></div>
+      <!-- <div class="item"><a href="#" class="nav-link">Chagas</a></div>
+      <div class="item"><a href="#" class="nav-link">Histórico</a></div>
+      <div class="item"><a href="#" class="nav-link">Ayuda</a></div>
+      <div class="item"><a href="#" class="nav-link">Salir</a></div> -->
+      <!-- <div class="item"><a href="#">Chagas Detector</a></div> -->
+    </div>
+
+    <div>
+      <div class='center'>
+        <div class='title'> Malaria <span class="title-strong">Detector</span></div>
+        <div class='content'>
+
+          <div class='no-display'>
+            <input  id='file-input'
+                    class='no-display'
+                    type='file'
+                    name='file'
+                    accept='image/*'
+                    onchange='showPicked(this)'>
+          </div>
+
+          <div>
+            <img id='image-picked' class='no-display' alt='Chosen Image' height='300'>
+
+            <div class='result-label'>
+              <label id='result-label'></label>
+            </div>
+
+            <div class='upload-label'>
+              <label id='upload-label'></label>
+            </div>
+
+          </div>
+          <button class='choose-file-button' type='button' onclick='showPicker()'>Selecciona una imagen</button>
+          <div class='analyze'>
+            <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analizar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
