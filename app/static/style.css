@@ -87,6 +87,7 @@
 }
 
 button.choose-file-button {
+  width: 100%;
   max-width: 640px;
   height: 60px;
   border: 1px dashed #E4E4E4;
